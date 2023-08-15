@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1: Chuyển độ c sang độ f</h1>
+<input type="number" id="nhietdo1">
+<button onclick="nhietdo()">Nhập</button>
+<p id="nhietdocf"></p>
+<script>
+    function nhietdo() {
+        let a = document.getElementById("nhietdo1").value
+        let b = a * 9 / 5 + 32
+        document.getElementById("nhietdocf").innerHTML = "Độ f là:" + b
+    }
+</script>
+<hr>
+<h1>Bài 1: Chuyển m sang feet</h1>
+<input type="numbet" id="metfeet">
+<button onclick="metfet()">Nhập</button>
+<p id="metfet"></p>
+<script>
+    function metfet() {
+        let a = document.getElementById("metfeet").value
+        let b = a * 3.2808
+        document.getElementById("metfet").innerHTML = "Feet:" + b
+    }
+</script>
+<hr>
+<h1>Bài 3: Tính diện tích hình vuông</h1>
+<p>Biết cạnh 1 cạnh là 10. Tính diện tích hình vuông</p>
+<input type="number" id="vuong">
+<input type="number" id="vuong2">
+<button onclick="hinhvuong()">Tính</button>
+<p id="kqhinhvuong"></p>
+<script>
+    function hinhvuong() {
+        let vuong = document.getElementById("vuong").value;
+        let vuong2 = document.getElementById("vuong2").value;
+        let hinh = vuong * vuong2;
+        document.getElementById("kqhinhvuong").innerHTML = "Diện tích hình vuông là:" + hinh
+
+    }
+</script>
+<hr>
+<h1>Bài 4: Tính diện tích hcn</h1>
+<p> Tính diện tích hcn khi biết 2 cạnh a=9 , b=6</p>
+<input type="number" id="hcn">
+<input type="number" id="hcn2">
+<button onclick="hcn()">Tính</button>
+<p id="hcn3"></p>
+<script>
+    function hcn() {
+        let a = document.getElementById("hcn").value;
+        let b = document.getElementById("hcn2").value;
+        let c = a * b;
+        document.getElementById("hcn").innerHTML = "Diện tích hcn là:" + c;
+    }
+</script>
+<hr>
+<h1>Bài 5: Tính diện tích tam giác vuông</h1>
+<p>Tính diện tích tam giác vuông khi biết 02 cạnh kề a =10, b=12</p>
+<input type="number" id="tgv">
+<input type="number" id="tgv2">
+<button onclick="tgv()">Tính</button>
+<script>
+    function tgv() {
+        let a = document.getElementById("tgv").value
+        let a2 = document.getElementById("tgv2").value
+        let a3 = (a * a2) / 2
+        alert("diện tích tam giác là:" + a3)
+    }
+</script>
+<h1>Bài 6: Giải phương trình bậc 1</h1>
+<input type="text" id="bac">
+<input type="text" id="bac1">
+<button onclick="ptb1()">Tính</button>
+<script>
+    function ptb1() {
+        let a = Number(document.getElementById("bac").value)
+        let b = Number(document.getElementById("bac1").value)
+        let x = -b / a
+        if (a == 0) {
+            if (b == 0) {
+                alert("Phương trình vô số nghiệm")
+            } else {
+                alert("Phương trình vô nghiệm")
+            }
+        } else if (-b / a) {
+            alert("Phương trình có nghiệm là x=" + x)
+        }
+    }
+</script>
+<h1>Bài 7: Giải phương trình bậc 2</h1>
+<input type="number" id="heso1">
+<input type="number" id="heso2">
+<input type="number" id="heso3">
+<button onclick="tinhheso()">Tính</button>
+<script>
+    function tinhheso() {
+        let a = document.getElementById("heso1").value;
+        let b = document.getElementById("heso2").value;
+        let c = document.getElementById("heso3").value;
+        let delta = b * b - 4 * a * c
+        if (delta < 0) {
+            alert("Phương trình ko có nghiệm");
+        } else if (delta == 0) {
+            let d = -b / (2 * a);
+            alert(" Phương trình có nghiệm kép:" + d);
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert("Phương trình có hai nghiệm x1 =" + x1 + "và x2 =" + x2);
+        }
+    }
+</script>
+<hr>
+<h1>Bài 8:Ktra tuổi </h1>
+<input type="number" id="kttuoi">
+<button onclick="ktrtuoi()">Nhập</button>
+<p id="kttuoi1"></p>
+<script>
+    function ktrtuoi() {
+        let a =document.getElementById("kttuoi").value)
+        if(a >= 0 && a <= 120){
+            alert("Là số nguyên")
+        } else if (a < 0 || a > 120) {
+            alert("Ko phải số nguyên")
+        }
+    }
+</script>
+<hr>
+<h1>Bài 9: Ktra 3 số cạnh tam giác.</h1>
+<p>Cạnh A<input type="number" id="ctg"></p>
+<p>Cạnh B<input type="number" id="ctg2"></p>
+<p>Cạnh C<input type="number" id="ctg3"></p>
+<button onclick="ctg1()">Tính</button>
+<p id="kqctg"></p>
+<script>
+    function ctg1() {
+        let a = document.getElementById("ctg").value;
+        let b = document.getElementById("ctg2").value;
+        let c = document.getElementById("ctg3").value;
+        if (a <= 0 || b <= 0 || c <= 0) {
+            alert("Cạnh phải lớn hơn 0")
+        } else if (a === b && b === c && a === c) {
+            alert("Tam giác đều")
+        } else if (a === b || b === c || c === a) {
+            alert("Tam giác cân")
+        } else if (a * a + b * b === c * c || a * c + c * c === b * b || b * b + c * c === a * c) {
+            alert("Tam giác vuông")
+        } else if (a + b > c || b + c > a || a + c > b) {
+            alert("K phải 3 cạnh tam giác")
+        } else {
+            alert("Tam giác thường")
+        }
+    }
+</script>
+<hr>
+<h1>Bài 10: Viết chương trình tính giá điện.</h1>
+<p>Nhập kWh<input type="number" id="giadien"></p>
+<button onclick="giadien()">Tính</button>
+<script>
+    function giadien() {
+        let a = document.getElementById("giadien").value
+        let b = a * 1.9203732
+        alert(b+"VNĐ")
+    }
+</script>
+<hr>
+<h1>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h1>
+<p>TNCN(Ko tính những khoản đc miễn thuế):<input type="number" id="thue"></p>
+<button onclick="tinhthue()">Tính</button>
+<script>
+    function tinhthue(){
+        let a = document.getElementById("thue").value
+        let b = (a/100)*20
+        alert("Bạn phải đóng"+b+"VNĐ tiền thuế TNCN")
+    }
+</script>
+<hr>
+<h1>Bài 12: Tính lãi vay ngân hàng.</h1>
+<p>Tiền vay:<input type="number" id="tienvay"></p>
+<p>Vay trong:</p>
+<p><input type="checkbox" id="12t">12 Tháng</p>
+<p><input type="checkbox" id="24t">24 Tháng</p>
+<p><input type="checkbox" id="36t">36 Tháng</p>
+<button onclick="laithang()">Tính Lãi</button>
+<script>
+    function laithang(){
+        let a = document.getElementById("tienvay").value
+        let b = document.getElementById("12t").value
+        let c = document.getElementById("24t").value
+        let d = document.getElementById("36t").value
+
+    }
+</script>
+
+</body>
+</html>

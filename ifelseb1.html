@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b1</title>
+</head>
+<body>
+<h1>Tính chỉ số BMI</h1>
+<p>Nhập cân nặng:(kg)<input type="number" id="cannang1"></p>
+<p>Nhập chiều cao:(m)<input type="number" id="chieucao1"></p>
+<button onclick="kiemtra()">Kiểm Tra</button>
+<p id="hien"></p>
+<script>
+    function kiemtra() {
+        let cannang = document.getElementById("cannang1").value;
+        let chieucao = document.getElementById("chieucao1").value;
+        let bmi = cannang / (chieucao ^ 2);
+        let result;
+
+        if (bmi < 16) {
+            result = "Gầy quá cu,nhậu đi"
+        } else if (bmi > 16) {
+            result = "Đẹp zai rồi đấy"
+        } else if (bmi > 25) {
+            result = "Body oke đấy cu"
+        } else if (bmi > 32) {
+            result = "Hơi béo rồi cu"
+        }
+        document.getElementById("hien").innerHTML = "chi so bmi:" + bmi + result
+    }
+</script>
+</body>
+</html>

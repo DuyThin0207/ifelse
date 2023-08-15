@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b3</title>
+</head>
+<body>
+<h1>Máy Tính</h1>
+<form name="form1">
+    <table border="0">
+        <tr>
+            <th colspan="4"><input type="text" name="kq"></th>
+        </tr>
+        <tr>
+            <td><input type="button" value="(" onclick="form1.kq.value +='('">
+            <td><input type="button" value=")" onclick="form1.kq.value +=')'">
+            <td><input type="button" value="%" onclick="form1.kq.value +='%'">
+            <td><input type="button" value="AC" onclick="form1.kq.value=''" id="xoa">
+        </tr>
+        <tr>
+            <td><input type="button" value="9" onclick="form1.kq.value +='9'">
+            <td><input type="button" value="8" onclick="form1.kq.value +='8'">
+            <td><input type="button" value="7" onclick="form1.kq.value +='7'">
+            <td><input type="button" value="/" onclick="form1.kq.value +='/'">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" onclick="form1.kq.value +='6'">
+            <td><input type="button" value="5" onclick="form1.kq.value +='5'">
+            <td><input type="button" value="4" onclick="form1.kq.value +='4'">
+            <td><input type="button" value="*" onclick="form1.kq.value +='*'">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="3" onclick="form1.kq.value +='3'">
+            <td><input type="button" value="2" onclick="form1.kq.value +='2'">
+            <td><input type="button" value="1" onclick="form1.kq.value +='1'">
+            <td><input type="button" value="-" onclick="form1.kq.value +='-'">
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="form1.kq.value +='0'">
+            <td><input type="button" value="." onclick="form1.kq.value +='.'">
+            <td><input type="button" value="=" onclick="form1.kq.value = eval(form1.kq.value)">
+            <td><input type="button" value="+" onclick="form1.kq.value +='+'">
+        </tr>
+    </table>
+</form>
+</body>
+</html>

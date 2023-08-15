@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b2</title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<input type="number" id="abc">
+<button onclick="ngaythang()">Nhập</button>
+<p id="hien"></p>
+<script>
+    function ngaythang() {
+        let thang = document.getElementById("abc").value;
+        let result;
+        if (thang==1) {
+            result = "Tháng 1 có 30 ngày"}
+        if (thang==2) {
+            result = "Tháng 2 có 28 ngày đến 29 ngày"}
+        if (thang==3) {
+            result = "Tháng 3 có 30 ngày"}
+        if (thang==4) {
+            result = "Tháng 4 có 29 ngày"}
+        if (thang==5) {
+            result = "Tháng 5 có 30 ngày"}
+        if (thang==6) {
+            result = "Tháng 6 có 29 ngày"}
+        if (thang==7) {
+            result = "Tháng 7 có 30 ngày"}
+        if (thang==8) {
+            result = "Tháng 8 có 29 ngày"}
+        if (thang==9) {
+            result = "Tháng 9 có 30 ngày"}
+        if (thang==10) {
+            result = "Tháng 10 có 29 ngày"}
+        if (thang==11) {
+            result = "Tháng 11 có 30 ngày"}
+        if (thang==12) {
+            result = "Tháng 12 có 29 ngày"}
+        else if (thang>12 || thang<1){
+            result = "Nhập lại tháng đi cu"
+        }
+
+    {document.getElementById("hien").innerHTML = result;
+        }
+    }
+</script>
+</body>
+</html>

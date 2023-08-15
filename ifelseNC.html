@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NangCao</title>
+</head>
+<body>
+<h1>Bài 1:Chia hết hay ko?</h1>
+<input type="number" id="so1">
+<input type="number" id="so2">
+<button onclick="tinhso()">Tính</button>
+<script>
+    function tinhso() {
+        let a = document.getElementById("so1").value
+        let b = document.getElementById("so2").value
+        let c = a % b
+        alert(c)
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 2: Mấy tuổi đi học lớp 10?</h1>
+<input type="number" id="tuoi">
+<button onclick="nhaptuoi()">Nhập</button>
+<p id="nhaptuoioday"></p>
+<script>
+    function nhaptuoi() {
+        let a = document.getElementById("tuoi").value
+        if (a >= 16) {
+            result = "Bạn đủ tuổi vào lớp 10"
+        }
+        if (a < 16) {
+            result = "Bạn đ đủ tuổi đi học lớp 10"
+        }
+        {
+            document.getElementById("nhaptuoioday").innerHTML = result
+        }
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 3: Số nguyên lớn hơn 0</h1>
+<input type="number" id="songuyen">
+<button onclick="songuyenlon()">Nhập</button>
+<p id="nhapsonguyen"></p>
+<script>
+    function songuyenlon() {
+        let a = document.getElementById("songuyen").value
+        if (a >= 1) {
+            result = "Lớn hơn 0"
+        }
+        if (a < 1) {
+            result = "Nhỏ hơn 0"
+        }
+        {
+            document.getElementById("nhapsonguyen").innerHTML = result
+        }
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 4: Tìm số lớn nhất</h1>
+<input type="number" id="solon1">
+<input type="number" id="solon2">
+<input type="number" id="solon3">
+<button onclick="timsolon()">Tính</button>
+<p id="solonnhat"></p>
+<script>
+    function timsolon() {
+        let a = +document.getElementById("solon1").value
+        let b = parseInt(document.getElementById("solon2").value)
+        let c = Number(document.getElementById("solon3").value)
+        let max;
+        if (a > b && a > c) {
+            max = a
+        }
+        if (b > a && b > c) {
+            max = b
+        }
+        if (c > a && c > b) {
+            max = c
+        }
+        document.getElementById("solonnhat").innerHTML = max
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 5: Xếp học lực</h1>
+<p>Bài ktra giữa kì<input type="number" id="hocluc1"></p>
+<p>Bài ktra cuối kì<input type="number" id="hocluc2"></p>
+<button onclick="xephocluc()"> Nhập</button>
+<p id="hocluc"></p>
+<script>
+    function xephocluc() {
+        let hoc1 = Number(document.getElementById("hocluc1").value)
+        let hoc2 = Number(document.getElementById("hocluc2").value)
+        let tong1 = (hoc1 + hoc2) / 2
+        let kq;
+        if (tong1 > 1 & tong1 <= 4) {
+            kq = "Trung Bình"
+        }
+        if (tong1 > 5 & tong1 <= 8) {
+            kq = "Khá"
+        }
+        if (tong1 > 8 & tong1 <= 10) {
+            kq = "Giỏi"
+        }
+        document.getElementById("hocluc").innerHTML = "Học lực của bạn:" + kq
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 6:Tính hoa hồng trên doanh thu</h1>
+<input type="number" id="hoahong">
+<button onclick="tinhhh()">Tính</button>
+<p id="kqq"></p>
+<script>
+    function tinhhh() {
+        let hh = Number(document.getElementById("hoahong").value)
+        let hh1 = (hh / 100) * 5
+        document.getElementById("kqq").innerHTML = "Hoa hồng bạn nhận được:" + hh1
+    }
+</script>
+<br>
+<hr>
+<br>
+<h1>Bài 7:</h1>
+</body>
+</html>
